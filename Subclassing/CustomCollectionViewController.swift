@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreData
-class CustomCollectionViewController: BaseViewController,UICollectionViewDelegate,UICollectionViewDataSource {
+class CustomCollectionViewController: BaseViewController,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UICollectionViewDataSource {
 
     @IBOutlet weak var collectionViewObject: UICollectionView!
     
@@ -44,7 +44,7 @@ class CustomCollectionViewController: BaseViewController,UICollectionViewDelegat
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"Cell", for: indexPath as IndexPath) as! CustomCollectionViewCell
         
         // Use the outlet in our custom class to get a reference to the UILabel in the cell
-        cell.backgroundColor = UIColor.cyan // make cell more visible in our example project
+//        cell.backgroundColor = UIColor.cyan // make cell more visible in our example project
         
         return cell
     }
